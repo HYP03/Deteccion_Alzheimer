@@ -1,6 +1,6 @@
 # Deteccion temprana del Alzheimer utilizando datos de Imagenes por resonancia magnética
 
-<img src=https://storage.googleapis.com/kaggle-datasets-images/1980/3398/681058c49b57532d4871214f85fdbb21/dataset-cover.jpg >
+![](dataset-cover.jpg)
 
 
 <h1>Contenidos<span class="tocSkip"></span></h1>
@@ -8,7 +8,7 @@
 
 ## Definicion del problema.
 
-<img src=https://www.ivanesalud.com/wp-content/uploads/2019/04/181-alcohol-demencia-precoz.jpg width="600" height = "420">
+![](dementia_istock.jpg)
 
 ### Contexto
 
@@ -24,7 +24,7 @@ A medida que la condición de la persona empeora, esta se aparta de la familia y
 
 La demencia no es una enfermedad específica, sino un grupo de trastornos caracterizados por el deterioro de al menos, dos funciones cerebrales como la disminución de la memoria u otras habilidades de pensamiento lo suficientemente graves como para reducir la capacidad de una persona para realizar las actividades cotidianas.
 
-<img src=https://upload.wikimedia.org/wikipedia/commons/5/5f/Brain-ALZH.png width="400" height = "300">
+![](Brain-ALZH.png)
 
 ## Datos
 
