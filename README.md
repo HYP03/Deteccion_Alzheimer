@@ -1,14 +1,9 @@
-# Deteccion temprana del Alzheimer utilizando datos de Imagenes por resonancia magnética
-
-![](dataset-cover.jpg)
-
-
-<h1>Contenidos<span class="tocSkip"></span></h1>
+<h1>Deteccion temprana del Alzheimer utilizando datos de Imagenes por resonancia magnética<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a href="#Definicion-del-problema." data-toc-modified-id="Definicion-del-problema.-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Definicion del problema.</a></span><ul class="toc-item"><li><span><a href="#Contexto" data-toc-modified-id="Contexto-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Contexto</a></span><ul class="toc-item"><li><span><a href="#Oasis" data-toc-modified-id="Oasis-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Oasis</a></span></li><li><span><a href="#Alzheimer" data-toc-modified-id="Alzheimer-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Alzheimer</a></span></li><li><span><a href="#Demencia" data-toc-modified-id="Demencia-1.1.3"><span class="toc-item-num">1.1.3&nbsp;&nbsp;</span>Demencia</a></span></li></ul></li></ul></li><li><span><a href="#Datos" data-toc-modified-id="Datos-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Datos</a></span><ul class="toc-item"><li><span><a href="#Carga-de-libreria-y-datos" data-toc-modified-id="Carga-de-libreria-y-datos-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Carga de libreria y datos</a></span></li></ul></li><li><span><a href="#EDA" data-toc-modified-id="EDA-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>EDA</a></span></li><li><span><a href="#Data-Precrocessing" data-toc-modified-id="Data-Precrocessing-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Data Precrocessing</a></span><ul class="toc-item"><li><span><a href="#Missing-values" data-toc-modified-id="Missing-values-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Missing values</a></span></li><li><span><a href="#Imputation" data-toc-modified-id="Imputation-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Imputation</a></span></li><li><span><a href="#Train/Test-sets" data-toc-modified-id="Train/Test-sets-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Train/Test sets</a></span></li></ul></li><li><span><a href="#Modelos" data-toc-modified-id="Modelos-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Modelos</a></span><ul class="toc-item"><li><span><a href="#1.-Linear-Regression" data-toc-modified-id="1.-Linear-Regression-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>1. Linear Regression</a></span></li><li><span><a href="#2.-Stochastic-Gradient-Descent" data-toc-modified-id="2.-Stochastic-Gradient-Descent-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>2. Stochastic Gradient Descent</a></span></li><li><span><a href="#3.-Logistic-Regression" data-toc-modified-id="3.-Logistic-Regression-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>3. Logistic Regression</a></span></li><li><span><a href="#4.-KNN" data-toc-modified-id="4.-KNN-5.4"><span class="toc-item-num">5.4&nbsp;&nbsp;</span>4. KNN</a></span></li><li><span><a href="#5.-Decision-Trees" data-toc-modified-id="5.-Decision-Trees-5.5"><span class="toc-item-num">5.5&nbsp;&nbsp;</span>5. Decision Trees</a></span></li><li><span><a href="#6.-SVM" data-toc-modified-id="6.-SVM-5.6"><span class="toc-item-num">5.6&nbsp;&nbsp;</span>6. SVM</a></span></li><li><span><a href="#7.-k-means-clustering" data-toc-modified-id="7.-k-means-clustering-5.7"><span class="toc-item-num">5.7&nbsp;&nbsp;</span>7. k-means clustering</a></span></li><li><span><a href="#8.-Random-Forest" data-toc-modified-id="8.-Random-Forest-5.8"><span class="toc-item-num">5.8&nbsp;&nbsp;</span>8. Random Forest</a></span></li><li><span><a href="#9.-Naive-Bayes" data-toc-modified-id="9.-Naive-Bayes-5.9"><span class="toc-item-num">5.9&nbsp;&nbsp;</span>9. Naive Bayes</a></span></li></ul></li><li><span><a href="#Evaluación-y-Resultados" data-toc-modified-id="Evaluación-y-Resultados-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Evaluación y Resultados</a></span><ul class="toc-item"><li><span><a href="#1.-Resultados" data-toc-modified-id="1.-Resultados-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>1. Resultados</a></span></li></ul></li><li><span><a href="#Conclusiones" data-toc-modified-id="Conclusiones-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusiones</a></span></li><li><span><a href="#Acknowledgements:" data-toc-modified-id="Acknowledgements:-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Acknowledgements:</a></span></li></ul></div>
 
 ## Definicion del problema.
 
-![](dementia_istock.jpg)
+<img src=https://www.ivanesalud.com/wp-content/uploads/2019/04/181-alcohol-demencia-precoz.jpg width="600" height = "420">
 
 ### Contexto
 
@@ -24,7 +19,7 @@ A medida que la condición de la persona empeora, esta se aparta de la familia y
 
 La demencia no es una enfermedad específica, sino un grupo de trastornos caracterizados por el deterioro de al menos, dos funciones cerebrales como la disminución de la memoria u otras habilidades de pensamiento lo suficientemente graves como para reducir la capacidad de una persona para realizar las actividades cotidianas.
 
-![](Brain-ALZH.png)
+<img src=https://upload.wikimedia.org/wikipedia/commons/5/5f/Brain-ALZH.png width="400" height = "300">
 
 ## Datos
 
@@ -491,7 +486,7 @@ plt.title('Gender and Demented rate')
 
 
     
-![png](output_19_1.png)
+![png](output_17_1.png)
     
 
 
@@ -515,7 +510,7 @@ plt.xlim(15.30)
 
 
     
-![png](output_21_1.png)
+![png](output_19_1.png)
     
 
 
@@ -554,19 +549,19 @@ plt.xlim(0.6,0.9)
 
 
     
-![png](output_23_1.png)
+![png](output_21_1.png)
     
 
 
 
     
-![png](output_23_2.png)
+![png](output_21_2.png)
     
 
 
 
     
-![png](output_23_3.png)
+![png](output_21_3.png)
     
 
 
@@ -591,7 +586,7 @@ plt.xlim(50,100)
 
 
     
-![png](output_25_1.png)
+![png](output_23_1.png)
     
 
 
@@ -616,7 +611,7 @@ plt.ylim(0, 0.16)
 
 
     
-![png](output_27_1.png)
+![png](output_25_1.png)
     
 
 
@@ -840,7 +835,7 @@ plt.show()
 
 
     
-![png](output_37_0.png)
+![png](output_35_0.png)
     
 
 
@@ -1103,7 +1098,7 @@ sns.heatmap(corr, cmap='coolwarm_r', annot_kws={'size':20}, annot=True)
 
 
     
-![png](output_46_1.png)
+![png](output_44_1.png)
     
 
 
@@ -1276,7 +1271,7 @@ conf_mat_acc(sgd)
 
 
     
-![png](output_63_2.png)
+![png](output_61_2.png)
     
 
 
@@ -1323,7 +1318,7 @@ conf_mat_acc(logreg)
 
 
     
-![png](output_66_2.png)
+![png](output_64_2.png)
     
 
 
@@ -1362,7 +1357,7 @@ conf_mat_acc(knn)
 
 
     
-![png](output_69_2.png)
+![png](output_67_2.png)
     
 
 
@@ -1400,7 +1395,7 @@ conf_mat_acc(decision_tree)
 
 
     
-![png](output_72_2.png)
+![png](output_70_2.png)
     
 
 
@@ -1438,7 +1433,7 @@ conf_mat_acc(svm)
 
 
     
-![png](output_75_2.png)
+![png](output_73_2.png)
     
 
 
@@ -1503,7 +1498,7 @@ plt.show()
 
 
     
-![png](output_78_0.png)
+![png](output_76_0.png)
     
 
 
@@ -1582,7 +1577,7 @@ conf_mat_acc(random_forest)
 
 
     
-![png](output_84_2.png)
+![png](output_82_2.png)
     
 
 
@@ -1619,7 +1614,7 @@ conf_mat_acc(gaussian)
 
 
     
-![png](output_87_2.png)
+![png](output_85_2.png)
     
 
 
@@ -1825,7 +1820,7 @@ compare
 
 
 
-Donde tal como se esperaba no son completamente identicas las predicciones, cabe destacar que Kmeans se ajusta progresivamente cuantas veces más se active (Nunca tomar la primera iteracion).
+Donde tal como se esperaba no son completamente identicas las predicciones, cabe destacar que Kmeans se ajusta progresivamente cuantas veces más se active (Nunca tomar la primera iteracion). Por otro lado, vemos que de los metodos sin cluster; tanto Decision Tree y Random Forest, se ajustan muy bien a los datos implementados, esto tiene una relación directa a los metodos que utilizan los médicos para determinar si una persona padece o no una enfermedad (Generalmente implementan el arbol de decisiones).
 
 ## Conclusiones
 
@@ -1945,6 +1940,8 @@ submission
 </div>
 
 
+
+Por lo tanto se implementa el DT como solución al problema.
 
 ## Acknowledgements:
 P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24 RR0213
